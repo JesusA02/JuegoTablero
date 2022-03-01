@@ -2,7 +2,7 @@ import javax.swing.*;
 public class Tablero{
     public int casillas = 0;
     public int numFichas = 0;
-    public int[] fichas = new int[numFichas];
+    public int[] fichas = new int[numFichas]; // Consultar al profe
 
     public Tablero(int numCasillas,int numF ){
         casillas = numCasillas;
@@ -19,7 +19,6 @@ public class Tablero{
 
     Ficha ficha = new Ficha(solicitarFichas());
 
-
     public void turnos(){
         int contador = 0;
         while(contador < fichas.length){ // En esta linea mediante un contador y utilizando 
@@ -30,8 +29,6 @@ public class Tablero{
 
     }
 
-
-    
     public void ganador(){
         int largoLista = fichas.length;
         for (int i=0; i < largoLista; i++ ){

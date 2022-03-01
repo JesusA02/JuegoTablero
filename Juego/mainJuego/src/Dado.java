@@ -1,4 +1,4 @@
-//import javax.swing.*;
+
 public class Dado {
     public int caras = 0;
 
