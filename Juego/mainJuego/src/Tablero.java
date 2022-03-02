@@ -2,22 +2,30 @@ import javax.swing.*;
 public class Tablero{
     public int casillas = 0;
     public int numFichas = 0;
-    public int[] fichas = new int[numFichas]; // Consultar al profe
+    public Ficha[] fichas; // Consultar al profe
+    
 
     public Tablero(int numCasillas,int numF ){
         casillas = numCasillas;
         numFichas = numF;
-        //int[] fichas = new int[numFichas];
-        
+        fichas = new Ficha[numFichas];
+        creadorFichas(numFichas); 
     }
 
-    public String solicitarFichas(){
-        String colorFicha = String.valueOf(JOptionPane.showInputDialog(null,"Digite el color de la ficha:  "));
-        return colorFicha;
+    //función que añade las fichas a la lista
 
+    public void creadorFichas(int numeroFichas){
+        int contador = 0;
+
+        for(int i = 0; i < fichas.length; i++ ){
+            String colorFicha = String.valueOf(JOptionPane.showInputDialog(null,"Digite el color de la ficha:  "));
+            Ficha ficha = new Ficha(colorFicha);
+            
+            fichas[contador] = ficha;
+            contador += 1;
+        }
     }
 
-    Ficha ficha = new Ficha(solicitarFichas());
 
     public void turnos(){
         int contador = 0;
@@ -29,14 +37,16 @@ public class Tablero{
 
     }
 
-    public void ganador(){
+    public boolean ganador(){
         int largoLista = fichas.length;
         for (int i=0; i < largoLista; i++ ){
-            if (i.posicion >= casillas){
-                System.out.println("El ganador es:  " );
-                break;
+            if (fichas[i].posicion >= casillas){
+                JOptionPane.showMessageDialog(null,"El ganador es la ficha color:  " + fichas[i].color);
+                return false;
+                
             }
         }
+        return true;
     }
     
 }
