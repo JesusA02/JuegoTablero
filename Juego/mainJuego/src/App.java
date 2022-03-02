@@ -8,7 +8,7 @@ public class App {
         boolean seguir = true;
 
         JOptionPane.showMessageDialog(null," ¡Bienvenido a este juego! Presione (Aceptar) para continuar. ");
-        cantiFichas = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite la cantidad de fichas con las que sea jugar: "));
+        cantiFichas = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite la cantidad de fichas con las que desea jugar: "));
         casillas = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite la cantidad de casillas con las que sea jugar: "));
 
         //Ficha miFicha = new Ficha();

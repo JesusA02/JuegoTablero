@@ -13,8 +13,9 @@ public class Ficha {
 
     public void avanzar(){
         int pasos = dado.lanzar();
+        System.out.println("La ficha se moverá: "+ pasos + " posiciones.");
         posicion += pasos;
-        System.out.println(posicion);
+        System.out.println("La ficha se encuentra en la posición:  "+ posicion );
     }
 
 }

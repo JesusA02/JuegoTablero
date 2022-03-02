@@ -30,7 +30,8 @@ public class Tablero{
     public void turnos(){
         int contador = 0;
         while(contador < fichas.length){ // En esta linea mediante un contador y utilizando
-            System.out.println(fichas[contador].color);
+            System.out.println(" ");
+            System.out.println("El siguiente en jugar es el jugador con la ficha color:  "+fichas[contador].color);
             fichas[contador].avanzar(); // el largo con la fila de fichas, hace que cada ficha avance
             contador += 1;               
 
