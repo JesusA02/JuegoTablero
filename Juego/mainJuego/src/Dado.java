@@ -7,7 +7,7 @@ public class Dado {
     }
 
     public int lanzar(){
-        int numRandom = (int) Math.random()*caras+1;
+        int numRandom = (int) (Math.random()*caras+1);
         return numRandom; //Número random
     }
 }

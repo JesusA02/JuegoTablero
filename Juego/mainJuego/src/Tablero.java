@@ -29,7 +29,8 @@ public class Tablero{
 
     public void turnos(){
         int contador = 0;
-        while(contador < fichas.length){ // En esta linea mediante un contador y utilizando 
+        while(contador < fichas.length){ // En esta linea mediante un contador y utilizando
+            System.out.println(fichas[contador].color);
             fichas[contador].avanzar(); // el largo con la fila de fichas, hace que cada ficha avance
             contador += 1;               
 
@@ -42,11 +43,11 @@ public class Tablero{
         for (int i=0; i < largoLista; i++ ){
             if (fichas[i].posicion >= casillas){
                 JOptionPane.showMessageDialog(null,"El ganador es la ficha color:  " + fichas[i].color);
-                return false;
+                return true;
                 
             }
         }
-        return true;
+        return false;
     }
     
 }

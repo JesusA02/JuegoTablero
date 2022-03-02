@@ -7,7 +7,7 @@ public class App {
         int cantiFichas = 0;
         boolean seguir = true;
 
-        JOptionPane.showMessageDialog(null," ¡Bienvenido! Presione (Aceptar) para continuar ");
+        JOptionPane.showMessageDialog(null," ¡Bienvenido a este juego! Presione (Aceptar) para continuar. ");
         cantiFichas = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite la cantidad de fichas con las que sea jugar: "));
         casillas = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite la cantidad de casillas con las que sea jugar: "));
 
@@ -18,7 +18,9 @@ public class App {
             
             miTablero.turnos();
 
-            miTablero.ganador();
+            if (miTablero.ganador()){
+                seguir = false;
+            }
 
         }
     }
