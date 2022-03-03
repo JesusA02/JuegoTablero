@@ -2,7 +2,7 @@ import javax.swing.*;
 public class Tablero{
     public int casillas = 0;
     public int numFichas = 0;
-    public Ficha[] fichas; // Consultar al profe
+    public Ficha[] fichas; 
     
 
     public Tablero(int numCasillas,int numF ){

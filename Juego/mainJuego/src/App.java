@@ -1,6 +1,5 @@
 import javax.swing.*;
 public class App {
-    
     public static void main(String[] args) throws Exception {
         
         int casillas = 0 ;
@@ -11,8 +10,7 @@ public class App {
         cantiFichas = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite la cantidad de fichas con las que desea jugar: "));
         casillas = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite la cantidad de casillas con las que sea jugar: "));
 
-        //Ficha miFicha = new Ficha();
-        Tablero miTablero = new Tablero(casillas,cantiFichas) ;
+        Tablero miTablero = new Tablero(casillas,cantiFichas);
 
         while (seguir){
             
